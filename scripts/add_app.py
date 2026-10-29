@@ -53,6 +53,7 @@ def update_source(args, ipa, download_url):
             "name": args.name or info.get("CFBundleDisplayName") or info.get("CFBundleName") or bundle_id,
             "bundleIdentifier": bundle_id,
             "developerName": args.developer or "未填写",
+            "subtitle": args.subtitle or "",
             "localizedDescription": args.description or "暂无介绍。",
             "iconURL": args.icon_url or source["iconURL"],
             "versions": [],
@@ -85,14 +86,17 @@ def update_source(args, ipa, download_url):
         v for v in app["versions"] if v["version"] != version["version"]
     ]
     # Keep legacy fields in sync for clients that do not read the versions array.
-    for field in ("version", "versionDate", "downloadURL", "size", "minOSVersion"):
+    for field in ("version", "versionDate", "versionDescription", "downloadURL", "size", "minOSVersion"):
         app.pop(field, None)
-    app.update({
-        "version": version["version"], "versionDate": version["date"],
-        "downloadURL": download_url, "size": version["size"],
-    })
-    if "minOSVersion" in version:
-        app["minOSVersion"] = version["minOSVersion"]
+    # Match the standard AltStore source app shape and keep optional metadata after core fields.
+    core_fields = ("name", "bundleIdentifier", "developerName", "subtitle",
+                   "localizedDescription", "iconURL", "screenshots", "tintColor",
+                   "versions", "appPermissions")
+    app = {key: app[key] for key in core_fields if key in app} | {
+        key: value for key, value in app.items() if key not in core_fields
+    }
+    source["apps"] = [app if item["bundleIdentifier"] == bundle_id else item
+                       for item in source["apps"]]
     output = json.dumps(source, ensure_ascii=False, indent=2) + "\n"
     # Replace only after metadata parsing and serialization both succeed.
     with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", dir=args.source.parent,

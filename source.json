@@ -11,6 +11,7 @@
       "name": "CiliCili",
       "bundleIdentifier": "cc.bili",
       "developerName": "Rone89",
+      "subtitle": "第三方哔哩哔哩客户端，支持视频、动态与弹幕",
       "localizedDescription": "使用 SwiftUI 开发的第三方哔哩哔哩客户端，支持首页推荐、动态、视频播放、弹幕与二维码登录。项目与下载来自 https://github.com/Rone89/cilicili 。",
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/cilicili.png",
       "versions": [
@@ -22,18 +23,13 @@
           "minOSVersion": "26.1",
           "localizedDescription": "# CiliCili 1.1.1\n\n- 新增动态「全部、投稿、番剧、专栏、UP」分类，独立保留浏览位置，并支持搜索当前动态账号全部已关注 UP 主。\n- 升级动态番剧卡片，点击直接进入对应分集，优化首次进入流程并修复简介及分集信息停留在加载状态的问题。\n- 升级个人空间，新增主页概览、收藏夹最新三项内容和三列追番列表，完善公开收藏查看与关注状态显示。\n- 新增底部标签显示设置，隐藏入口可从首页右上角访问，仅保留首页时自动隐藏底部栏，并完善首页头像菜单和未读消息提示。\n- 新增首页推荐长按反馈与 UP 屏蔽操作，支持管理本地屏蔽名单及账户黑名单。\n- 增强收藏夹与稍后再看管理，支持视频多选、批量移动、复制和移除，以及收藏夹创建、编辑、删除与排序。\n- 优化视频详情页旋转与清晰度切换的画面衔接，支持 4:3、3:2 等比例在竖屏全宽展示和滚动收缩，简介／评论切换移至底部栏。\n- 升级私信会话界面，点击底部「发送电波」打开输入弹窗，修复右滑返回误触刷新和短消息异常换行，并支持在评论弹窗内打开个人空间。\n- 优化大图缩放、下拉关闭和多图切换，默认加载 1600px 高清预览、按需查看原图，下载／分享与原图操作分开显示。\n- 修复部分评论分页提前停止和失败后无法继续加载的问题，完善楼中楼恢复，统一图文与评论排版，并将图片阴影控制扩展至视频封面。\n- 优化搜索页和我的页顶部搜索框，搜索类型与排序集中在同一菜单，同时完善底部渐进模糊、页面返回及视频横屏时的底部栏显示。\n- 修复首页冷启动短暂显示旧推荐的问题，加载占位随可见区域调整，避免首屏占位不足。\n\n未签名 IPA 已上传至本次 Release 附件，安装前需由侧载工具签名。\n"
         }
-      ],
-      "version": "1.1.1",
-      "versionDate": "2026-10-12T07:59:58Z",
-      "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.1.1/cilicili-1.1.1-1-unsigned.ipa",
-      "size": 23969183,
-      "minOSVersion": "26.1",
-      "subtitle": "第三方哔哩哔哩客户端，支持视频、动态与弹幕"
+      ]
     },
     {
       "name": "贴吧 Lite",
       "bundleIdentifier": "com.tiebalite.app",
       "developerName": "toamdou",
+      "subtitle": "原生贴吧客户端，支持浏览、收藏与批量签到",
       "localizedDescription": "第三方百度贴吧 iOS 原生客户端，支持帖子浏览、搜索、收藏、点赞、批量签到及图片和视频查看。暂不支持发帖和回复。项目与下载来自 https://github.com/toamdou/TiebaLite-IOS 。",
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/tiebalite.png",
       "versions": [
@@ -45,18 +41,13 @@
           "minOSVersion": "17.0",
           "localizedDescription": "## v2.2.0（2026-10-22）\r\n\r\n\r\n### 修复\r\n\r\n- 点图进大图：缩略图放大后落地那一下整张图被换掉\r\n- 点图片进大图时先显示缩略图大小、随后瞬间跳成大图；退出动画不连贯\r\n- 长图退出大图模式最后一下突然变形\r\n- 进帖时骨架是卡片样式、内容落地瞬间变扁平，过渡生硬\r\n- 骨架屏扫光动画卡顿\r\n- 帖子标题无法长按复制\r\n- 分享只有标题 + 链接，缺吧名\r\n\r\n### 新增\r\n\r\n- 多图网格：两张并排、三到四张四宫格、五张以上六宫格，超过 6 张时第 6 格显示 +N\r\n  （设置 → 使用习惯 → 多图网格）\r\n- 吧页头部改为「名片 → 分段 → 筛选」三层结构\r\n- 帖子标题独立字号档（14–34pt，默认 22），与正文字号互不影响\r\n- 深色与着色 App 图标\r\n- 帖子标题支持长按复制\r\n\r\n### 优化\r\n\r\n- GIF 解码挪到后台，同一张图多实例共享帧池\r\n- 文本异步绘制加代次校验，过期帧整帧作废，长列表滚动更稳\r\n- 低电量自动降帧；骨架扫光改用共享渐变图\r\n- 优化大量底层组件，使用更流畅\r\n- 优化视觉效果与界面设计风格\r\n---\r\n"
         }
-      ],
-      "version": "2.2.0",
-      "versionDate": "2026-10-22T11:11:42Z",
-      "downloadURL": "https://github.com/toamdou/TiebaLite-IOS/releases/download/v2.2.0/TiebaLite-v2.2.0.ipa",
-      "size": 4560839,
-      "minOSVersion": "17.0",
-      "subtitle": "原生贴吧客户端，支持浏览、收藏与批量签到"
+      ]
     },
     {
       "name": "Aidoku",
       "bundleIdentifier": "app.aidoku.Aidoku",
       "developerName": "Skitty",
+      "subtitle": "开源漫画阅读器，支持漫画源扩展与离线下载",
       "localizedDescription": "免费开源的漫画阅读器，支持漫画源扩展、离线下载、本地 CBZ 文件、Komga/Kavita/Suwayomi 服务和阅读进度追踪。项目与下载来自 https://github.com/Aidoku/Aidoku 。",
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/aidoku.png",
       "versions": [
@@ -70,11 +61,6 @@
           "localizedDescription": "A small build update for 0.9 with a number of bug fixes.\r\n\r\n- Fixed some pages not loading in webtoon reader\r\n- Improved webtoon reader memory usage (hopefully fixes crash after reading multiple chapters)\r\n- Fixed crash when searching anywhere in the macOS app\r\n- Various other bug fixes"
         }
       ],
-      "version": "0.9",
-      "versionDate": "2026-10-16T22:25:27Z",
-      "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.9-4/Aidoku.ipa",
-      "size": 14753154,
-      "minOSVersion": "15.0",
       "appPermissions": {
         "entitlements": [
           "aps-environment",
@@ -90,13 +76,13 @@
           "NSPhotoLibraryUsageDescription": "Aidoku needs permission to save pages in your photo library",
           "NSLocalNetworkUsageDescription": "Aidoku needs permission to connect to local Komga servers"
         }
-      },
-      "subtitle": "开源漫画阅读器，支持漫画源扩展与离线下载"
+      }
     },
     {
       "name": "Tube",
       "bundleIdentifier": "com.nembx.tube.iOS",
       "developerName": "nembx",
+      "subtitle": "原生视频播放器，支持追番、弹幕、画中画与 AirPlay",
       "localizedDescription": "原生 iPhone、iPad 和 Mac 视频播放器，支持 Bangumi 搜索与追番、多视频源及规则订阅、离线收藏与观看历史、DanDanPlay 弹幕、画中画和 AirPlay。基于 Cezzu 开源代码开发，项目与下载来自 https://github.com/nembx/tube 。",
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/tube.png",
       "versions": [
@@ -109,13 +95,7 @@
           "buildVersion": "18",
           "localizedDescription": "## 更新内容\n\n### 新增\n\n- 同步 KazumiRules，启用 LMM、TvTFun、xfdmnext 三个数据源；更新六个已有源，启用规则总数增至 19。\n\n### 修复\n\n- 支持 Kazumi 详情页地址模板与 API 搜索转网页章节，修复部分规则搜得到却打不开详情的问题。\n- 兼容 TvTFun 的 XPath 属性子串写法，正确解析剧集列表。\n- API 请求保留数字、布尔等 JSON 类型，正确处理包含引号或反斜杠的搜索词。\n\n### 变更\n\n- 跟随上游弃用 gugu3，保留 Tube 修复过的樱花源；同步规则索引与 App 离线种子。\n\n## 安装说明\n\n- `*-ios-unsigned.ipa`：未签名，安装前需自行签名（如 Sideloadly / AltStore / 自己的开发者证书）。\n- `*-macos.dmg`：本地 ad-hoc 签名、未公证。首次打开若被拦截，在「系统设置 → 隐私与安全性」里允许，或执行 `xattr -dr com.apple.quarantine /Applications/Tube.app`。\n\n\n**Full Changelog**: https://github.com/nembx/tube/compare/v0.3.3...v0.3.4"
         }
-      ],
-      "subtitle": "原生视频播放器，支持追番、弹幕、画中画与 AirPlay",
-      "version": "0.3.4",
-      "versionDate": "2026-10-28T15:42:21Z",
-      "downloadURL": "https://github.com/nembx/tube/releases/download/v0.3.4/Tube-0.3.4-ios-unsigned.ipa",
-      "size": 6156555,
-      "minOSVersion": "17.0"
+      ]
     }
   ],
   "news": []
