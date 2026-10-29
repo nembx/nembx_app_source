@@ -96,6 +96,33 @@
           "localizedDescription": "## 更新内容\n\n### 新增\n\n- 同步 KazumiRules，启用 LMM、TvTFun、xfdmnext 三个数据源；更新六个已有源，启用规则总数增至 19。\n\n### 修复\n\n- 支持 Kazumi 详情页地址模板与 API 搜索转网页章节，修复部分规则搜得到却打不开详情的问题。\n- 兼容 TvTFun 的 XPath 属性子串写法，正确解析剧集列表。\n- API 请求保留数字、布尔等 JSON 类型，正确处理包含引号或反斜杠的搜索词。\n\n### 变更\n\n- 跟随上游弃用 gugu3，保留 Tube 修复过的樱花源；同步规则索引与 App 离线种子。\n\n## 安装说明\n\n- `*-ios-unsigned.ipa`：未签名，安装前需自行签名（如 Sideloadly / AltStore / 自己的开发者证书）。\n- `*-macos.dmg`：本地 ad-hoc 签名、未公证。首次打开若被拦截，在「系统设置 → 隐私与安全性」里允许，或执行 `xattr -dr com.apple.quarantine /Applications/Tube.app`。\n\n\n**Full Changelog**: https://github.com/nembx/tube/compare/v0.3.3...v0.3.4"
         }
       ]
+    },
+    {
+      "name": "Zhihu++",
+      "bundleIdentifier": "com.github.zly2006.zhplus.ios",
+      "developerName": "zly2006 与社区贡献者",
+      "subtitle": "原生 Swift 知乎客户端，支持热榜、搜索、评论与收藏",
+      "localizedDescription": "面向 iPhone 和 iPad 的第三方知乎客户端，使用 Swift、SwiftUI 与 UIKit 原生实现，支持推荐、关注、热榜、日报、搜索、回答、文章、想法、评论与收藏。基于 zly2006/zhihu-plus-plus 修改，采用 AGPL-3.0-only 许可。项目与源码：https://github.com/Amadeus1P048596/zhihu-plus-plus-swift 。",
+      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/zhihuplusplus.png",
+      "versions": [
+        {
+          "version": "0.3.1",
+          "date": "2026-07-30T11:52:53Z",
+          "downloadURL": "https://github.com/Amadeus1P048596/zhihu-plus-plus-swift/releases/download/v0.3.1/ZhihuPlusPlus-0.3.1-unsigned-final.ipa",
+          "size": 3873247,
+          "minOSVersion": "16.0",
+          "buildVersion": "5",
+          "localizedDescription": "# Zhihu++ Swift v0.3.1\n\n## 首页与热榜\n\n- 修复未登录状态下热榜加载失败的问题，改用支持游客访问的移动端热榜接口。\n- 优化首页频道栏定位：推荐和日报优先贴近对应边缘，中间频道保持居中。\n- 为频道栏首尾保留与标题、内容一致的水平边距，避免选中推荐时紧贴屏幕边缘。\n\n## 海报分享\n\n- 使用知乎主题蓝完善海报配色，并统一标题、正文、引用和辅助信息的视觉层级。\n- 将 Zhihu++ 图标和原文二维码移至海报顶部，扫码入口更醒目。\n- 支持展示回答、文章、想法及评论作者头像；头像不可用时显示文字占位。\n- 精简互动信息，只保留赞同/点赞与评论数量，不再重复展示“回答、文章、想法、视频”等内容类型。\n\n## 分享入口\n\n- 回答、文章和想法的分享菜单统一仅保留“复制链接”和“分享内容海报”。\n- 移除重复的系统链接分享和 Markdown 复制、分享入口。\n\n## SideStore 正式更新\n\n本版本提供未签名 IPA：\n\n`ZhihuPlusPlus-0.3.1-unsigned-final.ipa`\n\n- 版本：`0.3.1 (5)`\n- Bundle ID：`com.github.zly2006.zhplus.ios`\n- 最低系统：iOS / iPadOS 16.0\n- 文件大小：3,873,247 字节\n- SHA-256：`b7f6be04c1d8fda090a1d76ac5683da1a66112ff23e6bb23160631afb974bfad`\n\n发布前已完成 354 项 Simulator 测试，全部通过。\n"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSCameraUsageDescription": "用于扫描知乎网页上的登录授权二维码",
+          "NSFaceIDUsageDescription": "用于解锁本机上的知乎++内容",
+          "NSPhotoLibraryAddUsageDescription": "用于将回答和评论中的图片保存到照片"
+        }
+      }
     }
   ],
   "news": []

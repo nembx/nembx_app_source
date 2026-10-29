@@ -59,6 +59,21 @@
         "updatedAt": "2026-10-28T15:42:20Z",
         "size": 6156555
       }
+    },
+    {
+      "repo": "Amadeus1P048596/zhihu-plus-plus-swift",
+      "assetPattern": "ZhihuPlusPlus-*-unsigned-final.ipa",
+      "name": "Zhihu++",
+      "developer": "zly2006 与社区贡献者",
+      "subtitle": "原生 Swift 知乎客户端，支持热榜、搜索、评论与收藏",
+      "description": "面向 iPhone 和 iPad 的第三方知乎客户端，使用 Swift、SwiftUI 与 UIKit 原生实现，支持推荐、关注、热榜、日报、搜索、回答、文章、想法、评论与收藏。基于 zly2006/zhihu-plus-plus 修改，采用 AGPL-3.0-only 许可。项目与源码：https://github.com/Amadeus1P048596/zhihu-plus-plus-swift 。",
+      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/zhihuplusplus.png",
+      "lastRelease": {
+        "tag": "v0.3.1",
+        "assetId": 495305741,
+        "updatedAt": "2026-07-30T11:52:52Z",
+        "size": 3873247
+      }
     }
   ]
 }
