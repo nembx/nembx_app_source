@@ -1,0 +1,63 @@
+name: 添加或更新应用
+
+on:
+  workflow_dispatch:
+    inputs:
+      ipa_url:
+        description: IPA 的公开 HTTPS 下载直链
+        required: true
+        type: string
+      icon_url:
+        description: 应用图标 HTTPS 网址（留空使用源图标）
+        type: string
+      app_name:
+        description: 应用显示名称（留空从 IPA 读取）
+        type: string
+      developer:
+        description: 应用开发者名称（首次添加建议填写）
+        type: string
+      description:
+        description: 应用介绍（选填）
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-app-source
+  cancel-in-progress: false
+
+jobs:
+  add-app:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: 下载 IPA 并更新源
+        env:
+          IPA_URL: ${{ inputs.ipa_url }}
+          ICON_URL: ${{ inputs.icon_url }}
+          APP_NAME: ${{ inputs.app_name }}
+          APP_DEVELOPER: ${{ inputs.developer }}
+          APP_DESCRIPTION: ${{ inputs.description }}
+        run: >-
+          python3 scripts/add_app.py
+          --url "$IPA_URL"
+          --icon-url "$ICON_URL"
+          --name "$APP_NAME"
+          --developer "$APP_DEVELOPER"
+          --description "$APP_DESCRIPTION"
+      - name: 保存源文件
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add source.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update app source"
+            git push origin HEAD:main
+          fi

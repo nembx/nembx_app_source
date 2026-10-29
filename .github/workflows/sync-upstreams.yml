@@ -1,0 +1,38 @@
+name: 检查上游应用更新
+
+on:
+  schedule:
+    - cron: '23 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-app-source
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: 检查 Release 并收录新 IPA
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/sync_github.py
+      - name: 保存软件源与更新记录
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add source.json upstreams.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Sync upstream app releases"
+            git push origin HEAD:main
+          fi

@@ -1,0 +1,18 @@
+{
+  "repositories": [
+    {
+      "repo": "Rone89/cilicili",
+      "assetPattern": "*-unsigned.ipa",
+      "name": "CiliCili",
+      "developer": "Rone89",
+      "description": "使用 SwiftUI 开发的第三方哔哩哔哩客户端，支持首页推荐、动态、视频播放、弹幕与二维码登录。项目与下载来自 https://github.com/Rone89/cilicili 。",
+      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/cilicili.png",
+      "lastRelease": {
+        "tag": "v1.1.1",
+        "assetId": 633095549,
+        "updatedAt": "2026-10-12T07:59:55Z",
+        "size": 23969183
+      }
+    }
+  ]
+}
