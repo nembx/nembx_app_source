@@ -53,7 +53,7 @@ def update_source(args, ipa, download_url):
             "name": args.name or info.get("CFBundleDisplayName") or info.get("CFBundleName") or bundle_id,
             "bundleIdentifier": bundle_id,
             "developerName": args.developer or "未填写",
-            "subtitle": args.subtitle or "",
+            "subtitle": getattr(args, "subtitle", None) or "",
             "localizedDescription": args.description or "暂无介绍。",
             "iconURL": args.icon_url or source["iconURL"],
             "versions": [],
@@ -85,7 +85,7 @@ def update_source(args, ipa, download_url):
     app["versions"] = [version] + [
         v for v in app["versions"] if v["version"] != version["version"]
     ]
-    # Keep legacy fields in sync for clients that do not read the versions array.
+    # Keep version metadata in the versions array, matching the current source format.
     for field in ("version", "versionDate", "versionDescription", "downloadURL", "size", "minOSVersion"):
         app.pop(field, None)
     # Match the standard AltStore source app shape and keep optional metadata after core fields.

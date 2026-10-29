@@ -50,7 +50,11 @@ def sync(config_path, source_path):
         fingerprint = {"tag": release["tag_name"], "assetId": asset["id"],
                        "updatedAt": asset["updated_at"], "size": asset["size"]}
         source = json.loads(source_path.read_text(encoding="utf-8"))
-        present = any(app.get("downloadURL") == asset["browser_download_url"] for app in source["apps"])
+        present = any(
+            (app["versions"][0].get("downloadURL") if app.get("versions")
+             else app.get("downloadURL")) == asset["browser_download_url"]
+            for app in source["apps"]
+        )
         if entry.get("lastRelease") == fingerprint and present:
             print(f"{entry['repo']}：已是最新版本 {release['tag_name']}")
             continue
