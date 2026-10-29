@@ -71,6 +71,8 @@ def update_source(args, ipa, download_url):
     }
     if info.get("MinimumOSVersion"):
         version["minOSVersion"] = info["MinimumOSVersion"]
+    if info.get("CFBundleVersion"):
+        version["buildVersion"] = str(info["CFBundleVersion"])
     if args.version_description:
         version["localizedDescription"] = args.version_description
     # The newly submitted IPA becomes the latest release; replace duplicate versions.

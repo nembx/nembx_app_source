@@ -27,6 +27,20 @@
         "updatedAt": "2026-10-22T12:59:39Z",
         "size": 4560839
       }
+    },
+    {
+      "repo": "Aidoku/Aidoku",
+      "assetPattern": "Aidoku.ipa",
+      "name": "Aidoku",
+      "developer": "Skitty",
+      "description": "免费开源的漫画阅读器，支持漫画源扩展、离线下载、本地 CBZ 文件、Komga/Kavita/Suwayomi 服务和阅读进度追踪。项目与下载来自 https://github.com/Aidoku/Aidoku 。",
+      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/aidoku.png",
+      "lastRelease": {
+        "tag": "v0.9-4",
+        "assetId": 648802068,
+        "updatedAt": "2026-10-16T22:24:47Z",
+        "size": 14753154
+      }
     }
   ]
 }
