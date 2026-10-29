@@ -58,6 +58,7 @@ def sync(config_path, source_path):
             url=asset["browser_download_url"], ipa=None, download_url=None, source=source_path,
             icon_url=entry.get("iconURL"), name=entry.get("name"),
             developer=entry.get("developer"), description=entry.get("description"),
+            subtitle=entry.get("subtitle"),
             date=release["published_at"], version_description=release.get("body") or None,
         ))
         entry["lastRelease"] = fingerprint

@@ -12,7 +12,8 @@
         "assetId": 633095549,
         "updatedAt": "2026-10-12T07:59:55Z",
         "size": 23969183
-      }
+      },
+      "subtitle": "第三方哔哩哔哩客户端，支持视频、动态与弹幕"
     },
     {
       "repo": "toamdou/TiebaLite-IOS",
@@ -26,7 +27,8 @@
         "assetId": 665894065,
         "updatedAt": "2026-10-22T12:59:39Z",
         "size": 4560839
-      }
+      },
+      "subtitle": "原生贴吧客户端，支持浏览、收藏与批量签到"
     },
     {
       "repo": "Aidoku/Aidoku",
@@ -40,6 +42,22 @@
         "assetId": 648802068,
         "updatedAt": "2026-10-16T22:24:47Z",
         "size": 14753154
+      },
+      "subtitle": "开源漫画阅读器，支持漫画源扩展与离线下载"
+    },
+    {
+      "repo": "nembx/tube",
+      "assetPattern": "Tube-*-ios-unsigned.ipa",
+      "name": "Tube",
+      "developer": "nembx",
+      "subtitle": "原生视频播放器，支持追番、弹幕、画中画与 AirPlay",
+      "description": "原生 iPhone、iPad 和 Mac 视频播放器，支持 Bangumi 搜索与追番、多视频源及规则订阅、离线收藏与观看历史、DanDanPlay 弹幕、画中画和 AirPlay。基于 Cezzu 开源代码开发，项目与下载来自 https://github.com/nembx/tube 。",
+      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/tube.png",
+      "lastRelease": {
+        "tag": "v0.3.4",
+        "assetId": 685466937,
+        "updatedAt": "2026-10-28T15:42:20Z",
+        "size": 6156555
       }
     }
   ]

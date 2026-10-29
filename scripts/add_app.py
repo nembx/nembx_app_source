@@ -63,6 +63,11 @@ def update_source(args, ipa, download_url):
                              ("localizedDescription", args.description), ("iconURL", args.icon_url)):
             if value:
                 app[field] = value
+    subtitle = getattr(args, "subtitle", None)
+    if subtitle:
+        app["subtitle"] = subtitle
+    elif not app.get("subtitle"):
+        app["subtitle"] = app["localizedDescription"].split("。", 1)[0].splitlines()[0][:80]
     version = {
         "version": info["CFBundleShortVersionString"],
         "date": args.date or datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
@@ -131,6 +136,7 @@ def main():
     parser.add_argument("--name", help="自定义显示名称")
     parser.add_argument("--developer", help="应用开发者名称")
     parser.add_argument("--description", help="应用介绍")
+    parser.add_argument("--subtitle", help="应用列表中的简短介绍")
     parser.add_argument("--date", help="版本发布日期（ISO 8601，默认当前 UTC 时间）")
     parser.add_argument("--version-description", help="本次版本更新说明")
     args = parser.parse_args()

@@ -27,7 +27,8 @@
       "versionDate": "2026-10-12T07:59:58Z",
       "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.1.1/cilicili-1.1.1-1-unsigned.ipa",
       "size": 23969183,
-      "minOSVersion": "26.1"
+      "minOSVersion": "26.1",
+      "subtitle": "第三方哔哩哔哩客户端，支持视频、动态与弹幕"
     },
     {
       "name": "贴吧 Lite",
@@ -49,7 +50,8 @@
       "versionDate": "2026-10-22T11:11:42Z",
       "downloadURL": "https://github.com/toamdou/TiebaLite-IOS/releases/download/v2.2.0/TiebaLite-v2.2.0.ipa",
       "size": 4560839,
-      "minOSVersion": "17.0"
+      "minOSVersion": "17.0",
+      "subtitle": "原生贴吧客户端，支持浏览、收藏与批量签到"
     },
     {
       "name": "Aidoku",
@@ -88,7 +90,32 @@
           "NSPhotoLibraryUsageDescription": "Aidoku needs permission to save pages in your photo library",
           "NSLocalNetworkUsageDescription": "Aidoku needs permission to connect to local Komga servers"
         }
-      }
+      },
+      "subtitle": "开源漫画阅读器，支持漫画源扩展与离线下载"
+    },
+    {
+      "name": "Tube",
+      "bundleIdentifier": "com.nembx.tube.iOS",
+      "developerName": "nembx",
+      "localizedDescription": "原生 iPhone、iPad 和 Mac 视频播放器，支持 Bangumi 搜索与追番、多视频源及规则订阅、离线收藏与观看历史、DanDanPlay 弹幕、画中画和 AirPlay。基于 Cezzu 开源代码开发，项目与下载来自 https://github.com/nembx/tube 。",
+      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/tube.png",
+      "versions": [
+        {
+          "version": "0.3.4",
+          "date": "2026-10-28T15:42:21Z",
+          "downloadURL": "https://github.com/nembx/tube/releases/download/v0.3.4/Tube-0.3.4-ios-unsigned.ipa",
+          "size": 6156555,
+          "minOSVersion": "17.0",
+          "buildVersion": "18",
+          "localizedDescription": "## 更新内容\n\n### 新增\n\n- 同步 KazumiRules，启用 LMM、TvTFun、xfdmnext 三个数据源；更新六个已有源，启用规则总数增至 19。\n\n### 修复\n\n- 支持 Kazumi 详情页地址模板与 API 搜索转网页章节，修复部分规则搜得到却打不开详情的问题。\n- 兼容 TvTFun 的 XPath 属性子串写法，正确解析剧集列表。\n- API 请求保留数字、布尔等 JSON 类型，正确处理包含引号或反斜杠的搜索词。\n\n### 变更\n\n- 跟随上游弃用 gugu3，保留 Tube 修复过的樱花源；同步规则索引与 App 离线种子。\n\n## 安装说明\n\n- `*-ios-unsigned.ipa`：未签名，安装前需自行签名（如 Sideloadly / AltStore / 自己的开发者证书）。\n- `*-macos.dmg`：本地 ad-hoc 签名、未公证。首次打开若被拦截，在「系统设置 → 隐私与安全性」里允许，或执行 `xattr -dr com.apple.quarantine /Applications/Tube.app`。\n\n\n**Full Changelog**: https://github.com/nembx/tube/compare/v0.3.3...v0.3.4"
+        }
+      ],
+      "subtitle": "原生视频播放器，支持追番、弹幕、画中画与 AirPlay",
+      "version": "0.3.4",
+      "versionDate": "2026-10-28T15:42:21Z",
+      "downloadURL": "https://github.com/nembx/tube/releases/download/v0.3.4/Tube-0.3.4-ios-unsigned.ipa",
+      "size": 6156555,
+      "minOSVersion": "17.0"
     }
   ],
   "news": []
