@@ -11,13 +11,16 @@ https://raw.githubusercontent.com/nembx/nembx_app_source/main/source.json
 ```
 
 仓库需要保持公开，这样 SideStore 才能直接读取。无需服务器或开启 GitHub Pages。
-已收录 [CiliCili](https://github.com/Rone89/cilicili)，下载链接直接指向作者的官方 Release。尚未经过 SideStore 真机添加验证。
+下载链接直接指向作者的官方 Release。尚未经过 SideStore 真机添加验证。
 
-当前收录的 CiliCili 1.1.1 最低要求 iOS 26.1（读取自 IPA），请确认设备系统版本符合要求。
+| 应用 | 当前版本 | 最低 iOS（读取自 IPA） | 官方项目 |
+| --- | --- | --- | --- |
+| CiliCili | 1.1.1 | 26.1 | [Rone89/cilicili](https://github.com/Rone89/cilicili) |
+| 贴吧 Lite | 2.2.0 | 17.0 | [toamdou/TiebaLite-IOS](https://github.com/toamdou/TiebaLite-IOS) |
 
 ## 自动跟踪更新
 
-已在 `upstreams.json` 配置跟踪 `Rone89/cilicili` 的正式 Release：
+已在 `upstreams.json` 配置跟踪上述项目的正式 Release：
 
 1. GitHub Actions 每 6 小时检查一次最新正式 Release（UTC 00:23、06:23、12:23、18:23，北京时间 08:23、14:23、20:23、次日 02:23）。调度可能延迟，并非实时监听。
 2. 发现新增或被替换的匹配 IPA 后，下载并读取真实元数据，同步版本、大小、最低系统要求和更新说明，自动提交软件源。
@@ -26,6 +29,8 @@ https://raw.githubusercontent.com/nembx/nembx_app_source/main/source.json
 可随时在 **Actions → 检查上游应用更新 → Run workflow** 手动检查。没有新版本时不会重复下载或提交。预发布和草稿不收录；最新 Release 暂无 IPA 时保留当前版本，等下次检查。
 
 要跟踪更多项目，在 `upstreams.json` 的 `repositories` 数组中增加对象，填写 `repo`、`assetPattern`、`name`、`developer`、`description` 和可选的 `iconURL`。模式必须只匹配一个 IPA；例如 `*-unsigned.ipa`。首次运行后会自动生成 `lastRelease`，无需手填。
+
+`assetPattern` 支持 `{tag}` 占位符，检查时会替换成当前 Release 标签。例如贴吧 Lite 使用 `TiebaLite-{tag}.ipa`，在 `v2.2.0` 中只匹配 `TiebaLite-v2.2.0.ipa`，避免选中其他系统变体。
 
 仅使用“添加或更新应用”入口添加的直链应用不会自动跟踪；需要在 `upstreams.json` 中另外配置 GitHub 仓库。纯直链没有统一的版本查询方式。
 

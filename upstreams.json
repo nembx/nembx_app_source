@@ -13,6 +13,20 @@
         "updatedAt": "2026-10-12T07:59:55Z",
         "size": 23969183
       }
+    },
+    {
+      "repo": "toamdou/TiebaLite-IOS",
+      "assetPattern": "TiebaLite-{tag}.ipa",
+      "name": "贴吧 Lite",
+      "developer": "toamdou",
+      "description": "第三方百度贴吧 iOS 原生客户端，支持帖子浏览、搜索、收藏、点赞、批量签到及图片和视频查看。暂不支持发帖和回复。项目与下载来自 https://github.com/toamdou/TiebaLite-IOS 。",
+      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/tiebalite.png",
+      "lastRelease": {
+        "tag": "v2.2.0",
+        "assetId": 665894065,
+        "updatedAt": "2026-10-22T12:59:39Z",
+        "size": 4560839
+      }
     }
   ]
 }

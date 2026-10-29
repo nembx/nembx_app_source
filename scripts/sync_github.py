@@ -37,9 +37,10 @@ def sync(config_path, source_path):
         release = latest_release(entry["repo"])
         if not release or release.get("draft") or release.get("prerelease"):
             continue
+        pattern = entry.get("assetPattern", "*.ipa").replace("{tag}", release["tag_name"])
         assets = [asset for asset in release.get("assets", [])
                   if asset["name"].lower().endswith(".ipa")
-                  and fnmatch.fnmatchcase(asset["name"], entry.get("assetPattern", "*.ipa"))]
+                  and fnmatch.fnmatchcase(asset["name"], pattern)]
         if not assets:
             print(f"{entry['repo']}：最新 Release 尚无匹配的 IPA，下次检查重试")
             continue

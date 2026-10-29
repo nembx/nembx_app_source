@@ -28,6 +28,28 @@
       "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.1.1/cilicili-1.1.1-1-unsigned.ipa",
       "size": 23969183,
       "minOSVersion": "26.1"
+    },
+    {
+      "name": "贴吧 Lite",
+      "bundleIdentifier": "com.tiebalite.app",
+      "developerName": "toamdou",
+      "localizedDescription": "第三方百度贴吧 iOS 原生客户端，支持帖子浏览、搜索、收藏、点赞、批量签到及图片和视频查看。暂不支持发帖和回复。项目与下载来自 https://github.com/toamdou/TiebaLite-IOS 。",
+      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/tiebalite.png",
+      "versions": [
+        {
+          "version": "2.2.0",
+          "date": "2026-10-22T11:11:42Z",
+          "downloadURL": "https://github.com/toamdou/TiebaLite-IOS/releases/download/v2.2.0/TiebaLite-v2.2.0.ipa",
+          "size": 4560839,
+          "minOSVersion": "17.0",
+          "localizedDescription": "## v2.2.0（2026-10-22）\r\n\r\n\r\n### 修复\r\n\r\n- 点图进大图：缩略图放大后落地那一下整张图被换掉\r\n- 点图片进大图时先显示缩略图大小、随后瞬间跳成大图；退出动画不连贯\r\n- 长图退出大图模式最后一下突然变形\r\n- 进帖时骨架是卡片样式、内容落地瞬间变扁平，过渡生硬\r\n- 骨架屏扫光动画卡顿\r\n- 帖子标题无法长按复制\r\n- 分享只有标题 + 链接，缺吧名\r\n\r\n### 新增\r\n\r\n- 多图网格：两张并排、三到四张四宫格、五张以上六宫格，超过 6 张时第 6 格显示 +N\r\n  （设置 → 使用习惯 → 多图网格）\r\n- 吧页头部改为「名片 → 分段 → 筛选」三层结构\r\n- 帖子标题独立字号档（14–34pt，默认 22），与正文字号互不影响\r\n- 深色与着色 App 图标\r\n- 帖子标题支持长按复制\r\n\r\n### 优化\r\n\r\n- GIF 解码挪到后台，同一张图多实例共享帧池\r\n- 文本异步绘制加代次校验，过期帧整帧作废，长列表滚动更稳\r\n- 低电量自动降帧；骨架扫光改用共享渐变图\r\n- 优化大量底层组件，使用更流畅\r\n- 优化视觉效果与界面设计风格\r\n---\r\n"
+        }
+      ],
+      "version": "2.2.0",
+      "versionDate": "2026-10-22T11:11:42Z",
+      "downloadURL": "https://github.com/toamdou/TiebaLite-IOS/releases/download/v2.2.0/TiebaLite-v2.2.0.ipa",
+      "size": 4560839,
+      "minOSVersion": "17.0"
     }
   ],
   "news": []
