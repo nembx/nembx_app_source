@@ -87,6 +87,15 @@
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/tube.png",
       "versions": [
         {
+          "version": "0.3.5",
+          "date": "2026-10-29T15:00:42Z",
+          "downloadURL": "https://github.com/nembx/tube/releases/download/v0.3.5/Tube-0.3.5-ios-unsigned.ipa",
+          "size": 7532351,
+          "minOSVersion": "17.0",
+          "buildVersion": "20",
+          "localizedDescription": "## 更新内容\n\n### 变更\n\n- 更换 iOS 和 macOS 应用图标，裁除原图白边与外部阴影。\n- 增加深蓝背景的深色图标，保留人物原色；更新两个平台的全部图标尺寸。\n\n## 安装说明\n\n- `*-ios-unsigned.ipa`：未签名，安装前需自行签名（如 Sideloadly / AltStore / 自己的开发者证书）。\n- `*-macos.dmg`：本地 ad-hoc 签名、未公证。首次打开若被拦截，在「系统设置 → 隐私与安全性」里允许，或执行 `xattr -dr com.apple.quarantine /Applications/Tube.app`。\n\n\n**Full Changelog**: https://github.com/nembx/tube/compare/v0.3.4...v0.3.5"
+        },
+        {
           "version": "0.3.4",
           "date": "2026-10-28T15:42:21Z",
           "downloadURL": "https://github.com/nembx/tube/releases/download/v0.3.4/Tube-0.3.4-ios-unsigned.ipa",

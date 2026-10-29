@@ -54,10 +54,10 @@
       "description": "原生 iPhone、iPad 和 Mac 视频播放器，支持 Bangumi 搜索与追番、多视频源及规则订阅、离线收藏与观看历史、DanDanPlay 弹幕、画中画和 AirPlay。基于 Cezzu 开源代码开发，项目与下载来自 https://github.com/nembx/tube 。",
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/tube.png",
       "lastRelease": {
-        "tag": "v0.3.4",
-        "assetId": 685466937,
-        "updatedAt": "2026-10-28T15:42:20Z",
-        "size": 6156555
+        "tag": "v0.3.5",
+        "assetId": 688911807,
+        "updatedAt": "2026-10-29T15:00:42Z",
+        "size": 7532351
       }
     },
     {
