@@ -6,14 +6,19 @@
       "name": "CiliCili",
       "developer": "Rone89",
       "description": "使用 SwiftUI 开发的第三方哔哩哔哩客户端，支持首页推荐、动态、视频播放、弹幕与二维码登录。项目与下载来自 https://github.com/Rone89/cilicili 。",
-      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/cilicili.png",
+      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/cilicili.png?v=4cdcfd3f20a2d18a",
       "lastRelease": {
         "tag": "v1.1.1",
         "assetId": 633095549,
         "updatedAt": "2026-10-12T07:59:55Z",
         "size": 23969183
       },
-      "subtitle": "第三方哔哩哔哩客户端，支持视频、动态与弹幕"
+      "subtitle": "第三方哔哩哔哩客户端，支持视频、动态与弹幕",
+      "iconSource": {
+        "url": "https://raw.githubusercontent.com/Rone89/cilicili/HEAD/bili/Assets.xcassets/AppIcon.appiconset/cilicili-icon.png",
+        "path": "assets/cilicili.png",
+        "bundleIdentifier": "cc.bili"
+      }
     },
     {
       "repo": "toamdou/TiebaLite-IOS",
@@ -21,14 +26,19 @@
       "name": "贴吧 Lite",
       "developer": "toamdou",
       "description": "第三方百度贴吧 iOS 原生客户端，支持帖子浏览、搜索、收藏、点赞、批量签到及图片和视频查看。暂不支持发帖和回复。项目与下载来自 https://github.com/toamdou/TiebaLite-IOS 。",
-      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/tiebalite.png",
+      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/tiebalite.png?v=7924103d094f3489",
       "lastRelease": {
         "tag": "v2.2.0",
         "assetId": 665894065,
         "updatedAt": "2026-10-22T12:59:39Z",
         "size": 4560839
       },
-      "subtitle": "原生贴吧客户端，支持浏览、收藏与批量签到"
+      "subtitle": "原生贴吧客户端，支持浏览、收藏与批量签到",
+      "iconSource": {
+        "url": "https://raw.githubusercontent.com/toamdou/TiebaLite-IOS/HEAD/TiebaLite/Images.xcassets/AppIcon.appiconset/icon-1024.png",
+        "path": "assets/tiebalite.png",
+        "bundleIdentifier": "com.tiebalite.app"
+      }
     },
     {
       "repo": "Aidoku/Aidoku",
@@ -36,14 +46,19 @@
       "name": "Aidoku",
       "developer": "Skitty",
       "description": "免费开源的漫画阅读器，支持漫画源扩展、离线下载、本地 CBZ 文件、Komga/Kavita/Suwayomi 服务和阅读进度追踪。项目与下载来自 https://github.com/Aidoku/Aidoku 。",
-      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/aidoku.png",
+      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/aidoku.png?v=4b71b4207391feb9",
       "lastRelease": {
         "tag": "v0.9-4",
         "assetId": 648802068,
         "updatedAt": "2026-10-16T22:24:47Z",
         "size": 14753154
       },
-      "subtitle": "开源漫画阅读器，支持漫画源扩展与离线下载"
+      "subtitle": "开源漫画阅读器，支持漫画源扩展与离线下载",
+      "iconSource": {
+        "url": "https://raw.githubusercontent.com/Aidoku/Aidoku/HEAD/Aidoku/App/Resources/Assets.xcassets/AppIcon.appiconset/Icon.png",
+        "path": "assets/aidoku.png",
+        "bundleIdentifier": "app.aidoku.Aidoku"
+      }
     },
     {
       "repo": "nembx/tube",
@@ -52,12 +67,17 @@
       "developer": "nembx",
       "subtitle": "原生视频播放器，支持追番、弹幕、画中画与 AirPlay",
       "description": "原生 iPhone、iPad 和 Mac 视频播放器，支持 Bangumi 搜索与追番、多视频源及规则订阅、离线收藏与观看历史、DanDanPlay 弹幕、画中画和 AirPlay。基于 Cezzu 开源代码开发，项目与下载来自 https://github.com/nembx/tube 。",
-      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/tube.png",
+      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/tube.png?v=c00a30e48feaf84b",
       "lastRelease": {
         "tag": "v0.3.5",
         "assetId": 688911807,
         "updatedAt": "2026-10-29T15:00:42Z",
         "size": 7532351
+      },
+      "iconSource": {
+        "url": "https://raw.githubusercontent.com/nembx/tube/HEAD/app/Tube-iOS/Sources/Assets.xcassets/AppIcon.appiconset/icon-light.png",
+        "path": "assets/tube.png",
+        "bundleIdentifier": "com.nembx.tube.iOS"
       }
     },
     {
@@ -67,12 +87,17 @@
       "developer": "zly2006 与社区贡献者",
       "subtitle": "原生 Swift 知乎客户端，支持热榜、搜索、评论与收藏",
       "description": "面向 iPhone 和 iPad 的第三方知乎客户端，使用 Swift、SwiftUI 与 UIKit 原生实现，支持推荐、关注、热榜、日报、搜索、回答、文章、想法、评论与收藏。基于 zly2006/zhihu-plus-plus 修改，采用 AGPL-3.0-only 许可。项目与源码：https://github.com/Amadeus1P048596/zhihu-plus-plus-swift 。",
-      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/zhihuplusplus.png",
+      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/zhihuplusplus.png?v=dadad7fdcb9d6990",
       "lastRelease": {
         "tag": "v0.3.1",
         "assetId": 495305741,
         "updatedAt": "2026-07-30T11:52:52Z",
         "size": 3873247
+      },
+      "iconSource": {
+        "url": "https://raw.githubusercontent.com/Amadeus1P048596/zhihu-plus-plus-swift/HEAD/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/icon-1024.png",
+        "path": "assets/zhihuplusplus.png",
+        "bundleIdentifier": "com.github.zly2006.zhplus.ios"
       }
     }
   ]

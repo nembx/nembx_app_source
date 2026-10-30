@@ -13,7 +13,7 @@
       "developerName": "Rone89",
       "subtitle": "第三方哔哩哔哩客户端，支持视频、动态与弹幕",
       "localizedDescription": "使用 SwiftUI 开发的第三方哔哩哔哩客户端，支持首页推荐、动态、视频播放、弹幕与二维码登录。项目与下载来自 https://github.com/Rone89/cilicili 。",
-      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/cilicili.png",
+      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/cilicili.png?v=4cdcfd3f20a2d18a",
       "versions": [
         {
           "version": "1.1.1",
@@ -31,7 +31,7 @@
       "developerName": "toamdou",
       "subtitle": "原生贴吧客户端，支持浏览、收藏与批量签到",
       "localizedDescription": "第三方百度贴吧 iOS 原生客户端，支持帖子浏览、搜索、收藏、点赞、批量签到及图片和视频查看。暂不支持发帖和回复。项目与下载来自 https://github.com/toamdou/TiebaLite-IOS 。",
-      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/tiebalite.png",
+      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/tiebalite.png?v=7924103d094f3489",
       "versions": [
         {
           "version": "2.2.0",
@@ -49,7 +49,7 @@
       "developerName": "Skitty",
       "subtitle": "开源漫画阅读器，支持漫画源扩展与离线下载",
       "localizedDescription": "免费开源的漫画阅读器，支持漫画源扩展、离线下载、本地 CBZ 文件、Komga/Kavita/Suwayomi 服务和阅读进度追踪。项目与下载来自 https://github.com/Aidoku/Aidoku 。",
-      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/aidoku.png",
+      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/aidoku.png?v=4b71b4207391feb9",
       "versions": [
         {
           "version": "0.9",
@@ -84,7 +84,7 @@
       "developerName": "nembx",
       "subtitle": "原生视频播放器，支持追番、弹幕、画中画与 AirPlay",
       "localizedDescription": "原生 iPhone、iPad 和 Mac 视频播放器，支持 Bangumi 搜索与追番、多视频源及规则订阅、离线收藏与观看历史、DanDanPlay 弹幕、画中画和 AirPlay。基于 Cezzu 开源代码开发，项目与下载来自 https://github.com/nembx/tube 。",
-      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/tube.png",
+      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/tube.png?v=c00a30e48feaf84b",
       "versions": [
         {
           "version": "0.3.5",
@@ -112,7 +112,7 @@
       "developerName": "zly2006 与社区贡献者",
       "subtitle": "原生 Swift 知乎客户端，支持热榜、搜索、评论与收藏",
       "localizedDescription": "面向 iPhone 和 iPad 的第三方知乎客户端，使用 Swift、SwiftUI 与 UIKit 原生实现，支持推荐、关注、热榜、日报、搜索、回答、文章、想法、评论与收藏。基于 zly2006/zhihu-plus-plus 修改，采用 AGPL-3.0-only 许可。项目与源码：https://github.com/Amadeus1P048596/zhihu-plus-plus-swift 。",
-      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/zhihuplusplus.png",
+      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/zhihuplusplus.png?v=dadad7fdcb9d6990",
       "versions": [
         {
           "version": "0.3.1",

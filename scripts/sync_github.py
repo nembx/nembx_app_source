@@ -11,6 +11,7 @@ import urllib.error
 import urllib.request
 
 from add_app import ROOT, add_app
+from sync_icons import sync_icons
 
 
 def latest_release(repo):
@@ -31,6 +32,7 @@ def latest_release(repo):
 
 
 def sync(config_path, source_path):
+    sync_icons(config_path, source_path)
     config = json.loads(config_path.read_text(encoding="utf-8"))
     changed = False
     for entry in config["repositories"]:
