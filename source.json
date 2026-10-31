@@ -87,6 +87,15 @@
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/tube.png?v=c00a30e48feaf84b",
       "versions": [
         {
+          "version": "0.3.6",
+          "date": "2026-10-31T02:10:58Z",
+          "downloadURL": "https://github.com/nembx/tube/releases/download/v0.3.6/Tube-0.3.6-ios-unsigned.ipa",
+          "size": 7575992,
+          "minOSVersion": "17.0",
+          "buildVersion": "22",
+          "localizedDescription": "## 更新内容\n\n### 修复\n\n- 「继续观看」封面在 iOS 重装 / 更新后一直空白：历史里存的是旧容器的绝对路径。\n  现在按文件名在当前容器重新定位帧截图，找不到就按条目号取 Bangumi 海报顶上。\n\n### 变更\n\n- 短评、长评、单集吐槽与「热门」改走 `next.<站点>/p1` 接口，选镜像站时不再需要翻墙；\n  接口不可用时才回落到官方网页。镜像站的「热门」也从近似排序变成真实榜单。\n- 登录仍固定官方：镜像站未代理换 token 的端点，网页层另有反机器人验证。\n  登录后的收藏与进度同步照常跟随所选站点，无需翻墙。\n\n## 安装说明\n\n- `*-ios-unsigned.ipa`：未签名，安装前需自行签名（如 Sideloadly / AltStore / 自己的开发者证书）。\n- `*-macos.dmg`：本地 ad-hoc 签名、未公证。首次打开若被拦截，在「系统设置 → 隐私与安全性」里允许，或执行 `xattr -dr com.apple.quarantine /Applications/Tube.app`。\n\n\n**Full Changelog**: https://github.com/nembx/tube/compare/v0.3.5...v0.3.6"
+        },
+        {
           "version": "0.3.5",
           "date": "2026-10-29T15:00:42Z",
           "downloadURL": "https://github.com/nembx/tube/releases/download/v0.3.5/Tube-0.3.5-ios-unsigned.ipa",
