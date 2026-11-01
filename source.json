@@ -87,6 +87,15 @@
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/tube.png?v=c00a30e48feaf84b",
       "versions": [
         {
+          "version": "0.3.7",
+          "date": "2026-11-01T11:41:26Z",
+          "downloadURL": "https://github.com/nembx/tube/releases/download/v0.3.7/Tube-0.3.7-ios-unsigned.ipa",
+          "size": 7585534,
+          "minOSVersion": "17.0",
+          "buildVersion": "25",
+          "localizedDescription": "## 更新内容\n\n### 新增\n\n- 适配 iPhone Duo：开合屏时窄屏 / 宽屏两套外壳之间切换，导航栈、正在看的页面、\n  搜索结果与播放状态都保留，不再折一下就回到首页重拉。iPad 分屏从宽拖窄同样受益。\n- 播放页的朝向锁按当前屏幕的 size class 判断手机姿态：Duo 合着与 iPhone 一致，\n  展开后按 iPad 处理，不再强制竖屏，宽屏摆法里也不再显示「全屏」键。\n- iOS 26 起底部 dock 向下滚动时收成一颗圆钮，向上滚动再展开，与 Apple Music 一致。\n\n### 修复\n\n- 打开搜索页或提交搜索会先卡一下：空闲态的分区行不是懒加载，进页面要一次性铺完\n  全部分区与封面卡，并同时发起全部分区请求。现在按视口懒加载，与首页一致。\n\n## 安装说明\n\n- `*-ios-unsigned.ipa`：未签名，安装前需自行签名（如 Sideloadly / AltStore / 自己的开发者证书）。\n- `*-macos.dmg`：本地 ad-hoc 签名、未公证。首次打开若被拦截，在「系统设置 → 隐私与安全性」里允许，或执行 `xattr -dr com.apple.quarantine /Applications/Tube.app`。\n\n\n**Full Changelog**: https://github.com/nembx/tube/compare/v0.3.6...v0.3.7"
+        },
+        {
           "version": "0.3.6",
           "date": "2026-10-31T02:10:58Z",
           "downloadURL": "https://github.com/nembx/tube/releases/download/v0.3.6/Tube-0.3.6-ios-unsigned.ipa",
