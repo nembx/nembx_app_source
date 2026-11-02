@@ -87,6 +87,15 @@
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/tube.png?v=c00a30e48feaf84b",
       "versions": [
         {
+          "version": "0.3.8",
+          "date": "2026-11-02T14:16:04Z",
+          "downloadURL": "https://github.com/nembx/tube/releases/download/v0.3.8/Tube-0.3.8-ios-unsigned.ipa",
+          "size": 7591241,
+          "minOSVersion": "17.0",
+          "buildVersion": "30",
+          "localizedDescription": "## 更新内容\n\n### 修复\n\n- iOS 放着别的 App 的歌点进 Tube，音乐立刻被掐断：启动时就激活了独占的播放音频会话。\n  现在只在真正起播时才接管声音，翻页浏览不影响后台音乐；关掉播放页后会把声音交还，\n  被打断的那首歌自己续播。\n- iPhone 上从详情页等二级页点 dock 的「追番」，页面没切过去，得再点一下：三个入口\n  共用一条导航栈，切入口前没清栈。现在与 iPad 顶栏一致，切入口先回到根。\n\n### 变更\n\n- 主页的「回到顶部」改成跟着 dock 的收合走：往下滚、dock 缩成圆钮时才冒头，\n  往上滚 dock 展开时让位，不再滚过半屏就一直挂在角上。iOS 26 起它镜像到收合圆钮\n  的另一侧：同一行、同尺寸、离边等距，一左一右像一对。\n\n## 安装说明\n\n- `*-ios-unsigned.ipa`：未签名，安装前需自行签名（如 Sideloadly / AltStore / 自己的开发者证书）。\n- `*-macos.dmg`：本地 ad-hoc 签名、未公证。首次打开若被拦截，在「系统设置 → 隐私与安全性」里允许，或执行 `xattr -dr com.apple.quarantine /Applications/Tube.app`。\n\n\n**Full Changelog**: https://github.com/nembx/tube/compare/v0.3.7...v0.3.8"
+        },
+        {
           "version": "0.3.7",
           "date": "2026-11-01T11:41:26Z",
           "downloadURL": "https://github.com/nembx/tube/releases/download/v0.3.7/Tube-0.3.7-ios-unsigned.ipa",
