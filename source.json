@@ -16,6 +16,15 @@
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/cilicili.png?v=4cdcfd3f20a2d18a",
       "versions": [
         {
+          "version": "1.1.2",
+          "date": "2026-11-03T13:44:00Z",
+          "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.1.2/bili-release-unsigned.ipa",
+          "size": 24312627,
+          "minOSVersion": "26.1",
+          "buildVersion": "57",
+          "localizedDescription": "> 注意：版本标签暂时指向旧源码，请勿使用下方自动生成的 Source code。附件 IPA 为正确的 1.1.2（Build 57）；[查看对应源码](https://github.com/Rone89/cilicili/tree/f15c51da490e5f1fda32b8574e5cfc8014f2e72d)。\r\n\r\n## 本次更新\r\n\r\n- 改善暂停、恢复和拖动进度时的播放稳定性，支持设置后台播放。\r\n- 收藏和稍后再看支持搜索、排序；稍后再看可按观看进度筛选。\r\n- 评论草稿可保留，改善评论刷新与显示；视频评论排序使用系统控件。\r\n- 优化搜索结果加载和键盘操作。\r\n- 投币时可同时点赞，修复部分未点赞视频投币失败的问题。\r\n- 网络断开时显示提示；自动恢复测试入口可在开发者与诊断中开启，默认关闭。\r\n\r\n## 安装包\r\n\r\n附件为未签名 IPA，需要自行签名后安装。"
+        },
+        {
           "version": "1.1.1",
           "date": "2026-10-12T07:59:58Z",
           "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.1.1/cilicili-1.1.1-1-unsigned.ipa",
