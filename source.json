@@ -96,6 +96,15 @@
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/tube.png?v=c00a30e48feaf84b",
       "versions": [
         {
+          "version": "0.3.9",
+          "date": "2026-11-05T15:11:51Z",
+          "downloadURL": "https://github.com/nembx/tube/releases/download/v0.3.9/Tube-0.3.9-ios-unsigned.ipa",
+          "size": 7609536,
+          "minOSVersion": "17.0",
+          "buildVersion": "31",
+          "localizedDescription": "## 更新内容\n\n### 新增\n\n- 追番页右上角新增宫格密度开关：窄屏可在三列小图与两列大图之间一键互换，\n  选择会记住，下次进入保持上次的密度。\n\n### 变更\n\n- 首页「继续观看」卡片改版：标题和「第 N 集 · 看到 12:34」压在封面底部的渐变上，\n  卡片就是一张 16:9 图，横向一条看起来干净得多；本地帧丢了、退到竖版海报的条目\n  改成海报居中 + 模糊兜底，不再被硬裁成横条。\n\n## 安装说明\n\n- `*-ios-unsigned.ipa`：未签名，安装前需自行签名（如 Sideloadly / AltStore / 自己的开发者证书）。\n- `*-macos.dmg`：本地 ad-hoc 签名、未公证。首次打开若被拦截，在「系统设置 → 隐私与安全性」里允许，或执行 `xattr -dr com.apple.quarantine /Applications/Tube.app`。\n\n\n**Full Changelog**: https://github.com/nembx/tube/compare/v0.3.8...v0.3.9"
+        },
+        {
           "version": "0.3.8",
           "date": "2026-11-02T14:16:04Z",
           "downloadURL": "https://github.com/nembx/tube/releases/download/v0.3.8/Tube-0.3.8-ios-unsigned.ipa",
