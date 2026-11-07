@@ -96,6 +96,15 @@
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/tube.png?v=c00a30e48feaf84b",
       "versions": [
         {
+          "version": "0.3.10",
+          "date": "2026-11-07T14:04:03Z",
+          "downloadURL": "https://github.com/nembx/tube/releases/download/v0.3.10/Tube-0.3.10-ios-unsigned.ipa",
+          "size": 7631829,
+          "minOSVersion": "17.0",
+          "buildVersion": "35",
+          "localizedDescription": "## 更新内容\n\n### 新增\n\n- 弹幕设置新增关键词屏蔽：可逐行批量添加、自动去重和删除，匹配忽略大小写及\n  全角、半角。设置页与播放器共用屏蔽词，暂停时添加也会立即隐藏匹配弹幕。\n- 补齐 iOS、iPadOS 与 macOS 播放器的 AirPlay 投屏入口，连接后显示投屏状态，\n  并补充本地网络访问说明。接收设备需支持 AirPlay，通过本地代理播放时需处于\n  可互通的局域网；实际连接与播放效果仍需真实设备验证。\n\n### 变更\n\n- 设置、弹幕设置、规则、分区、搜索结果与剧集页统一共享底色、表单宽度和页边距，\n  减少页面切换时的样式差异；完整的逐屏视觉验收尚未完成。\n\n## 安装说明\n\n- `*-ios-unsigned.ipa`：未签名，安装前需自行签名（如 Sideloadly / AltStore / 自己的开发者证书）。\n- `*-macos.dmg`：本地 ad-hoc 签名、未公证。首次打开若被拦截，在「系统设置 → 隐私与安全性」里允许，或执行 `xattr -dr com.apple.quarantine /Applications/Tube.app`。\n\n\n**Full Changelog**: https://github.com/nembx/tube/compare/v0.3.9...v0.3.10"
+        },
+        {
           "version": "0.3.9",
           "date": "2026-11-05T15:11:51Z",
           "downloadURL": "https://github.com/nembx/tube/releases/download/v0.3.9/Tube-0.3.9-ios-unsigned.ipa",
