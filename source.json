@@ -96,6 +96,15 @@
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/tube.png?v=c00a30e48feaf84b",
       "versions": [
         {
+          "version": "0.3.11",
+          "date": "2026-11-08T02:34:49Z",
+          "downloadURL": "https://github.com/nembx/tube/releases/download/v0.3.11/Tube-0.3.11-ios-unsigned.ipa",
+          "size": 7688991,
+          "minOSVersion": "17.0",
+          "buildVersion": "37",
+          "localizedDescription": "## 更新内容\n\n### 新增\n\n- 播放器新增「片头片尾与连续播放」设置，按番剧保存片头、片尾跳过时长，\n  支持 0–600 秒，默认关闭。片头每集只自动跳过一次，续播超过片头时不回退，\n  手动拖回片头后不重复跳过。\n- 可开启自动播放下一集：进入设定的片尾区间或本集自然结束后，显示 5 秒倒计时，\n  支持取消及立即播放；暂停、缓冲或编辑设置时暂停倒计时，最后一集不循环。\n  后台及退出播放器界面后的画中画连续播放尚未保证。\n\n### 修复\n\n- 设置页统一文字与控件布局：左侧标题、右侧开关；操作行统一文字起点，\n  主题选择器保留左侧标题，减少组件与文字错位。\n\n## 安装说明\n\n- `*-ios-unsigned.ipa`：未签名，安装前需自行签名（如 Sideloadly / AltStore / 自己的开发者证书）。\n- `*-macos.dmg`：本地 ad-hoc 签名、未公证。首次打开若被拦截，在「系统设置 → 隐私与安全性」里允许，或执行 `xattr -dr com.apple.quarantine /Applications/Tube.app`。\n\n\n**Full Changelog**: https://github.com/nembx/tube/compare/v0.3.10...v0.3.11"
+        },
+        {
           "version": "0.3.10",
           "date": "2026-11-07T14:04:03Z",
           "downloadURL": "https://github.com/nembx/tube/releases/download/v0.3.10/Tube-0.3.10-ios-unsigned.ipa",
