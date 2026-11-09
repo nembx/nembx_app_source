@@ -8,10 +8,10 @@
       "description": "使用 SwiftUI 开发的第三方哔哩哔哩客户端，支持首页推荐、动态、视频播放、弹幕与二维码登录。项目与下载来自 https://github.com/Rone89/cilicili 。",
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/cilicili.png?v=4cdcfd3f20a2d18a",
       "lastRelease": {
-        "tag": "v1.1.2",
-        "assetId": 705755908,
-        "updatedAt": "2026-11-03T13:43:57Z",
-        "size": 24312627
+        "tag": "v1.1.3",
+        "assetId": 727032593,
+        "updatedAt": "2026-11-09T10:12:38Z",
+        "size": 24576338
       },
       "subtitle": "第三方哔哩哔哩客户端，支持视频、动态与弹幕",
       "iconSource": {
