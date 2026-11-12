@@ -109,10 +109,10 @@
       "description": "使用 SwiftUI 开发的 iPhone 聚合直播应用，支持 B站、虎牙和斗鱼直播推荐与搜索、直播间收藏和历史记录。B站支持原生播放、清晰度与线路切换及实时弹幕；虎牙和斗鱼通过应用内浏览器观看，抖音提供官网入口和直播间链接收藏。项目与下载来自 https://github.com/nembx/JLive 。",
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/source.png",
       "lastRelease": {
-        "tag": "v0.2.0",
-        "assetId": 736068321,
-        "updatedAt": "2026-11-11T16:04:36Z",
-        "size": 553126
+        "tag": "v0.3.0",
+        "assetId": 740080909,
+        "updatedAt": "2026-11-12T15:54:22Z",
+        "size": 828818
       }
     }
   ]

@@ -224,6 +224,15 @@
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/source.png",
       "versions": [
         {
+          "version": "0.3.0",
+          "date": "2026-11-12T15:54:24Z",
+          "downloadURL": "https://github.com/nembx/JLive/releases/download/v0.3.0/JLive-0.3.0.ipa",
+          "size": 828818,
+          "minOSVersion": "17.0",
+          "buildVersion": "2",
+          "localizedDescription": "## 更新内容\n\n- 发布 0.3.0：新增主题图标与播放器内设置，接入虎牙斗鱼播放弹幕、B站登录发送和收藏备份 (90d403c)\n\n## 安装\n\nIPA 没有签名，需要用 AltStore、SideStore、Sideloadly 或 TrollStore 等工具自行签名后安装。\n"
+        },
+        {
           "version": "0.2.0",
           "date": "2026-11-11T16:04:37Z",
           "downloadURL": "https://github.com/nembx/JLive/releases/download/v0.2.0/JLive-0.2.0.ipa",
