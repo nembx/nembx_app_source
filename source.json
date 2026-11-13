@@ -224,6 +224,15 @@
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/source.png",
       "versions": [
         {
+          "version": "0.4.0",
+          "date": "2026-11-13T16:21:01Z",
+          "downloadURL": "https://github.com/nembx/JLive/releases/download/v0.4.0/JLive-0.4.0.ipa",
+          "size": 1008927,
+          "minOSVersion": "17.0",
+          "buildVersion": "3",
+          "localizedDescription": "## 更新内容\n\n- 发布 0.4.0：接入抖音推荐、原生播放与实时弹幕，完善画质和链接打开 (ff0316a)\n\n## 安装\n\nIPA 没有签名，需要用 AltStore、SideStore、Sideloadly 或 TrollStore 等工具自行签名后安装。\n"
+        },
+        {
           "version": "0.3.0",
           "date": "2026-11-12T15:54:24Z",
           "downloadURL": "https://github.com/nembx/JLive/releases/download/v0.3.0/JLive-0.3.0.ipa",
