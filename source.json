@@ -224,6 +224,15 @@
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/source.png",
       "versions": [
         {
+          "version": "0.5.0",
+          "date": "2026-11-14T04:18:31Z",
+          "downloadURL": "https://github.com/nembx/JLive/releases/download/v0.5.0/JLive-0.5.0.ipa",
+          "size": 1122276,
+          "minOSVersion": "17.0",
+          "buildVersion": "4",
+          "localizedDescription": "## 更新内容\n\n- 发布 0.5.0：优化搜索退出与卡片对齐，增加收藏开播筛选和抖音登录搜索 (02a4a67)\n\n## 安装\n\nIPA 没有签名，需要用 AltStore、SideStore、Sideloadly 或 TrollStore 等工具自行签名后安装。\n"
+        },
+        {
           "version": "0.4.0",
           "date": "2026-11-13T16:21:01Z",
           "downloadURL": "https://github.com/nembx/JLive/releases/download/v0.4.0/JLive-0.4.0.ipa",
