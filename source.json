@@ -205,6 +205,15 @@
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/cilicili.png?v=4cdcfd3f20a2d18a",
       "versions": [
         {
+          "version": "1.1.4",
+          "date": "2026-11-14T09:45:45Z",
+          "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.1.4/bili-release-unsigned.ipa",
+          "size": 24660955,
+          "minOSVersion": "26.1",
+          "buildVersion": "172",
+          "localizedDescription": "## 更新内容（1.1.3 → 1.1.4）\n\n- **启动更快**：点开视频到出画面明显提速。\n- **修复 #66**：全屏后画面漂移到左下角（HEVC/AV1 编码场景）。\n- **弹幕重做**：更省电，暂停/拖动/倍速自动跟随；修好不显示、位置错、重叠、断流、空档、重复等问题。\n- **弹幕设置更干净**：去掉灰黑色块；横屏调字体粗细不再被弹回竖屏。\n- **横屏 100% 显示区域可铺满**（底部按钮区除外）。\n- **其他**：图片/封面清晰度合并为一个选项；长视频标题可展开看全。\n\n---\n\n**安装说明**：附件为**未签名** IPA，需自行签名后安装。\n"
+        },
+        {
           "version": "1.1.3",
           "date": "2026-11-09T10:12:47Z",
           "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.1.3/bili-release-unsigned.ipa",
