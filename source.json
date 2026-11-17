@@ -242,6 +242,15 @@
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/source.png",
       "versions": [
         {
+          "version": "0.7.1",
+          "date": "2026-11-17T16:48:10Z",
+          "downloadURL": "https://github.com/nembx/JLive/releases/download/v0.7.1/JLive-0.7.1.ipa",
+          "size": 1160213,
+          "minOSVersion": "17.0",
+          "buildVersion": "7",
+          "localizedDescription": "## 更新内容\n\n- 发布 0.7.1：收藏自动更新开播状态，修复 B站切换分区仍显示旧内容 (cd412a7)\n\n## 安装\n\nIPA 没有签名，需要用 AltStore、SideStore、Sideloadly 或 TrollStore 等工具自行签名后安装。\n"
+        },
+        {
           "version": "0.7.0",
           "date": "2026-11-16T15:29:17Z",
           "downloadURL": "https://github.com/nembx/JLive/releases/download/v0.7.0/JLive-0.7.0.ipa",
