@@ -205,6 +205,15 @@
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/cilicili.png?v=4cdcfd3f20a2d18a",
       "versions": [
         {
+          "version": "1.1.5",
+          "date": "2026-11-17T11:42:35Z",
+          "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.1.5/bili-release-unsigned.ipa",
+          "size": 24814110,
+          "minOSVersion": "26.1",
+          "buildVersion": "203",
+          "localizedDescription": "## 更新内容（1.1.4 → 1.1.5）\n\n- **顶栏交互统一**：搜索页与「我的」页面采用系统原生顶栏搜索与按钮布局；动态页右上角切换箭头尺寸调整得更协调。\n- **视频页状态栏清晰**：浅色模式下进入视频或直播详情页时，顶部状态栏图标恢复清晰可见。\n- **底栏防误触回顶**：底栏最小化成胶囊后，首次点击只展开底栏方便切换页面；在展开状态下再轻点当前 Tab 才返回顶部。\n- **顶部渐变收窄**：保留系统柔和渐进模糊效果，移除多余顶部留白占位，整体视野更干净。\n\n---\n\n**安装说明**：附件为**未签名** IPA，需自行签名后安装。"
+        },
+        {
           "version": "1.1.4",
           "date": "2026-11-14T09:45:45Z",
           "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.1.4/bili-release-unsigned.ipa",
