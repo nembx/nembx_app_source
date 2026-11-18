@@ -242,6 +242,15 @@
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/source.png",
       "versions": [
         {
+          "version": "0.7.2",
+          "date": "2026-11-18T14:58:53Z",
+          "downloadURL": "https://github.com/nembx/JLive/releases/download/v0.7.2/JLive-0.7.2.ipa",
+          "size": 1176583,
+          "minOSVersion": "17.0",
+          "buildVersion": "8",
+          "localizedDescription": "## 更新内容\n\n- 发布 0.7.2：修复横屏上下黑边，增加蜂窝网络和 Wi-Fi 默认画质设置 (7ef31f0)\n\n## 安装\n\nIPA 没有签名，需要用 AltStore、SideStore、Sideloadly 或 TrollStore 等工具自行签名后安装。\n"
+        },
+        {
           "version": "0.7.1",
           "date": "2026-11-17T16:48:10Z",
           "downloadURL": "https://github.com/nembx/JLive/releases/download/v0.7.1/JLive-0.7.1.ipa",
