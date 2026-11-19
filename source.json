@@ -16,6 +16,15 @@
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/cilicili.png?v=4cdcfd3f20a2d18a",
       "versions": [
         {
+          "version": "1.1.6",
+          "date": "2026-11-19T21:24:27Z",
+          "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.1.6/bili-release-unsigned.ipa",
+          "size": 24747937,
+          "minOSVersion": "26.1",
+          "buildVersion": "218",
+          "localizedDescription": "## 更新内容（1.1.5 → 1.1.6）\n\n• **原生播放底层转正与手感优化**：正式采用系统原生 `AVPlayerViewController` 底座配合通透液态玻璃自绘控件，优化横向滑动调进度响应与松手出帧速度，统一手动全屏、重力横屏与系统画中画衔接体验。\n• **弹幕架构收敛与旋转稳定性修复**：点播由原生 `AVSynchronizedLayer` 同步驱动、直播由 `Metal` 渲染并彻底移除第三方 `DanmakuKit` 依赖；解决横竖屏旋转时弹幕闪烁、位置偏移与清晰度切换闪退问题，新增大会员渐变彩色弹幕及「同屏弹幕上限」设置。\n• **杜比视界与 HDR 播放精简**：移除旧版「杜比视界渲染」开关与双层叠加播放器，统一交由系统原生高动态范围输出配合内置防过曝兼容处理，避免额外功耗与画中画/全屏割裂。\n• **底栏动效与评论弹窗细节**：彻底修复二级页面返回一级页面时底部 TabBar 闪现及滚动最小化失效问题；新增「评论弹窗不展开到最大高度」开关，保持更舒适的阅读视野。\n\n--------\n\n安装说明：附件为未签名 IPA（`1.1.6` Build `218`），需自行签名后安装。\n"
+        },
+        {
           "version": "1.1.2",
           "date": "2026-11-03T13:44:00Z",
           "downloadURL": "https://github.com/Rone89/cilicili/releases/download/v1.1.2/bili-release-unsigned.ipa",
@@ -241,6 +250,15 @@
       "localizedDescription": "使用 SwiftUI 开发的 iPhone 聚合直播应用，支持 B站、虎牙和斗鱼直播推荐与搜索、直播间收藏和历史记录。B站支持原生播放、清晰度与线路切换及实时弹幕；虎牙和斗鱼通过应用内浏览器观看，抖音提供官网入口和直播间链接收藏。项目与下载来自 https://github.com/nembx/JLive 。",
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/source.png",
       "versions": [
+        {
+          "version": "0.7.3",
+          "date": "2026-11-19T15:44:03Z",
+          "downloadURL": "https://github.com/nembx/JLive/releases/download/v0.7.3/JLive-0.7.3.ipa",
+          "size": 1177361,
+          "minOSVersion": "17.0",
+          "buildVersion": "10",
+          "localizedDescription": "## 更新内容\n\n- 发布 0.7.3：弹幕走完全程后消失，更新软件介绍与截图 (e962b75)\n- 修复弹幕提前消失，精简功能介绍并补充软件截图 (bbba82e)\n\n## 安装\n\nIPA 没有签名，需要用 AltStore、SideStore、Sideloadly 或 TrollStore 等工具自行签名后安装。\n"
+        },
         {
           "version": "0.7.2",
           "date": "2026-11-18T14:58:53Z",
