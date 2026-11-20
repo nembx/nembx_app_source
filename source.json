@@ -251,6 +251,15 @@
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/source.png",
       "versions": [
         {
+          "version": "0.7.4",
+          "date": "2026-11-20T14:30:57Z",
+          "downloadURL": "https://github.com/nembx/JLive/releases/download/v0.7.4/JLive-0.7.4.ipa",
+          "size": 1192318,
+          "minOSVersion": "17.0",
+          "buildVersion": "11",
+          "localizedDescription": "## 更新内容\n\n- 发布 0.7.4：明确画质切换结果，适配 iPhone Duo 双屏尺寸与横屏布局 (32f214f)\n\n## 安装\n\nIPA 没有签名，需要用 AltStore、SideStore、Sideloadly 或 TrollStore 等工具自行签名后安装。\n"
+        },
+        {
           "version": "0.7.3",
           "date": "2026-11-19T15:44:03Z",
           "downloadURL": "https://github.com/nembx/JLive/releases/download/v0.7.3/JLive-0.7.3.ipa",
