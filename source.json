@@ -251,6 +251,15 @@
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/source.png",
       "versions": [
         {
+          "version": "0.7.6",
+          "date": "2026-11-24T14:39:40Z",
+          "downloadURL": "https://github.com/nembx/JLive/releases/download/v0.7.6/JLive-0.7.6.ipa",
+          "size": 14562286,
+          "minOSVersion": "17.0",
+          "buildVersion": "13",
+          "localizedDescription": "## 更新内容\n\n- 发布 0.7.6：新增 B站应用内登录页，修复画质提示反复弹出 (b244b2d)\n\n## 安装\n\nIPA 没有签名，需要用 AltStore、SideStore、Sideloadly 或 TrollStore 等工具自行签名后安装。\n"
+        },
+        {
           "version": "0.7.5",
           "date": "2026-11-21T10:45:56Z",
           "downloadURL": "https://github.com/nembx/JLive/releases/download/v0.7.5/JLive-0.7.5.ipa",
