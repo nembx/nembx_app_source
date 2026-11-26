@@ -251,6 +251,15 @@
       "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/source.png",
       "versions": [
         {
+          "version": "0.7.7",
+          "date": "2026-11-26T15:03:31Z",
+          "downloadURL": "https://github.com/nembx/JLive/releases/download/v0.7.7/JLive-0.7.7.ipa",
+          "size": 14552698,
+          "minOSVersion": "17.0",
+          "buildVersion": "14",
+          "localizedDescription": "## 更新内容\n\n- 发布 0.7.7：移除发现、收藏和我的页面标语，精简空状态提示 (f467206)\n\n## 安装\n\nIPA 没有签名，需要用 AltStore、SideStore、Sideloadly 或 TrollStore 等工具自行签名后安装。\n"
+        },
+        {
           "version": "0.7.6",
           "date": "2026-11-24T14:39:40Z",
           "downloadURL": "https://github.com/nembx/JLive/releases/download/v0.7.6/JLive-0.7.6.ipa",
