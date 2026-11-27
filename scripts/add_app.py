@@ -105,6 +105,7 @@ def update_source(args, ipa, download_url):
         temporary_path = Path(temp.name)
     temporary_path.replace(args.source)
     print(f"已收录：{app['name']} {version['version']} ({bundle_id})")
+    return bundle_id
 
 
 def add_app(args):
@@ -112,8 +113,7 @@ def add_app(args):
     if args.icon_url:
         https_url(args.icon_url)
     if args.ipa:
-        update_source(args, args.ipa, download_url)
-        return
+        return update_source(args, args.ipa, download_url)
     https_url(args.url)
     request = urllib.request.Request(args.url, headers={"User-Agent": "nembx-app-source/1.0"})
     with tempfile.TemporaryDirectory(prefix="nembx-ipa-") as directory:
@@ -126,7 +126,7 @@ def add_app(args):
                 if size > MAX_DOWNLOAD:
                     raise ValueError("IPA 超过 2 GiB，停止下载")
                 target.write(chunk)
-        update_source(args, ipa, download_url)
+        return update_source(args, ipa, download_url)
 
 
 def main():

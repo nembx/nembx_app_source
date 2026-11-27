@@ -3,6 +3,7 @@
     {
       "repo": "Rone89/cilicili",
       "assetPattern": "*-unsigned.ipa",
+      "latestOnly": true,
       "name": "CiliCili",
       "developer": "Rone89",
       "description": "使用 SwiftUI 开发的第三方哔哩哔哩客户端，支持首页推荐、动态、视频播放、弹幕与二维码登录。项目与下载来自 https://github.com/Rone89/cilicili 。",
@@ -17,7 +18,7 @@
       "iconSource": {
         "url": "https://raw.githubusercontent.com/Rone89/cilicili/HEAD/bili/Assets.xcassets/AppIcon.appiconset/cilicili-icon.png",
         "path": "assets/cilicili.png",
-        "bundleIdentifier": "cc.bili"
+        "bundleIdentifier": "com.rayc.cilicili"
       }
     },
     {

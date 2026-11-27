@@ -11,7 +11,7 @@ import urllib.error
 import urllib.request
 
 from add_app import ROOT, add_app
-from sync_icons import sync_icons
+from sync_icons import replace_file, sync_icons
 
 
 def latest_release(repo):
@@ -29,6 +29,35 @@ def latest_release(repo):
             print(f"{repo}：暂无可读取的正式 Release")
             return None
         raise
+
+
+def latest_download_url(app):
+    versions = app.get("versions")
+    return versions[0].get("downloadURL") if versions else app.get("downloadURL")
+
+
+def keep_latest_only(source_path, source, entry, latest_app):
+    release_prefix = f"https://github.com/{entry['repo']}/releases/download/".lower()
+    apps = [
+        app for app in source["apps"]
+        if app is latest_app or not any(
+            (version.get("downloadURL") or "").lower().startswith(release_prefix)
+            for version in (app.get("versions") or [app])
+        )
+    ]
+    versions = latest_app.get("versions", [])
+    if len(apps) != len(source["apps"]) or len(versions) > 1:
+        if len(versions) > 1:
+            latest_app["versions"] = versions[:1]
+        source["apps"] = apps
+        output = json.dumps(source, ensure_ascii=False, indent=2) + "\n"
+        replace_file(source_path, output.encode("utf-8"))
+
+    icon_source = entry.get("iconSource")
+    if icon_source and icon_source["bundleIdentifier"] != latest_app["bundleIdentifier"]:
+        icon_source["bundleIdentifier"] = latest_app["bundleIdentifier"]
+        return True
+    return False
 
 
 def sync(config_path, source_path):
@@ -52,23 +81,27 @@ def sync(config_path, source_path):
         fingerprint = {"tag": release["tag_name"], "assetId": asset["id"],
                        "updatedAt": asset["updated_at"], "size": asset["size"]}
         source = json.loads(source_path.read_text(encoding="utf-8"))
-        present = any(
-            (app["versions"][0].get("downloadURL") if app.get("versions")
-             else app.get("downloadURL")) == asset["browser_download_url"]
-            for app in source["apps"]
+        download_url = asset["browser_download_url"]
+        latest_app = next(
+            (app for app in source["apps"] if latest_download_url(app) == download_url), None
         )
-        if entry.get("lastRelease") == fingerprint and present:
+        if entry.get("lastRelease") == fingerprint and latest_app is not None:
             print(f"{entry['repo']}：已是最新版本 {release['tag_name']}")
-            continue
-        add_app(argparse.Namespace(
-            url=asset["browser_download_url"], ipa=None, download_url=None, source=source_path,
-            icon_url=entry.get("iconURL"), name=entry.get("name"),
-            developer=entry.get("developer"), description=entry.get("description"),
-            subtitle=entry.get("subtitle"),
-            date=release["published_at"], version_description=release.get("body") or None,
-        ))
-        entry["lastRelease"] = fingerprint
-        changed = True
+        else:
+            bundle_id = add_app(argparse.Namespace(
+                url=download_url, ipa=None, download_url=None, source=source_path,
+                icon_url=entry.get("iconURL"), name=entry.get("name"),
+                developer=entry.get("developer"), description=entry.get("description"),
+                subtitle=entry.get("subtitle"),
+                date=release["published_at"], version_description=release.get("body") or None,
+            ))
+            entry["lastRelease"] = fingerprint
+            changed = True
+            if entry.get("latestOnly"):
+                source = json.loads(source_path.read_text(encoding="utf-8"))
+                latest_app = next(app for app in source["apps"] if app["bundleIdentifier"] == bundle_id)
+        if entry.get("latestOnly") and keep_latest_only(source_path, source, entry, latest_app):
+            changed = True
     if changed:
         config_path.write_text(json.dumps(config, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
