@@ -1,4 +1,5 @@
 import copy
+import io
 import json
 from pathlib import Path
 import plistlib
@@ -8,7 +9,7 @@ from unittest.mock import patch
 import zipfile
 
 from add_app import add_app
-from sync_github import sync
+from sync_github import latest_release, sync
 
 
 class SyncTests(unittest.TestCase):
@@ -53,6 +54,21 @@ class SyncTests(unittest.TestCase):
         add, original_config = self.run_sync()
         add.assert_not_called()
         self.assertEqual(self.config_path.read_bytes(), original_config)
+
+    def test_default_channel_uses_latest_stable_endpoint(self):
+        entry = self.config["repositories"][0]
+        with patch("urllib.request.urlopen", return_value=io.BytesIO(json.dumps(self.release).encode())) as fetch:
+            self.assertEqual(latest_release(entry), self.release)
+        self.assertEqual(fetch.call_args.args[0].full_url, "https://api.github.com/repos/example/app/releases/latest")
+
+    def test_prerelease_channel_skips_drafts_and_android_only_releases(self):
+        entry = {"repo": "example/app", "includePrereleases": True, "assetPattern": "*-unsigned.ipa"}
+        preview = {**self.release, "prerelease": True, "assets": [{"name": "app-unsigned.ipa"}]}
+        android_only = {**self.release, "assets": [{"name": "app.apk"}]}
+        pages = [[{**preview, "draft": True}] + [android_only] * 99, [preview, self.release]]
+        with patch("urllib.request.urlopen", side_effect=[io.BytesIO(json.dumps(page).encode()) for page in pages]) as fetch:
+            self.assertEqual(latest_release(entry), preview)
+        self.assertTrue(fetch.call_args.args[0].full_url.endswith("&page=2"))
 
     def test_replaced_asset_at_same_url_is_processed(self):
         release = copy.deepcopy(self.release)

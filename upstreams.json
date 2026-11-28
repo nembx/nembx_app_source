@@ -120,6 +120,27 @@
         "path": "assets/jlive.png",
         "bundleIdentifier": "com.nembx.JLive"
       }
+    },
+    {
+      "repo": "Costben/COBO",
+      "assetPattern": "Cobo-*-unsigned.ipa",
+      "includePrereleases": true,
+      "name": "Cobo",
+      "developer": "Costben",
+      "subtitle": "第三方微博客户端，支持多账号、图文发布与私信",
+      "description": "第三方微博客户端，支持浏览推荐与关注时间线、搜索热搜、发布图文、查看评论与私信，以及切换多个账号。此软件源也收录 iOS 预览版。项目与下载来自 https://github.com/Costben/COBO 。",
+      "iconURL": "https://raw.githubusercontent.com/nembx/nembx_app_source/main/assets/cobo.png?v=640146a857f0c08b",
+      "lastRelease": {
+        "tag": "v1.2.12-pre",
+        "assetId": 803021888,
+        "updatedAt": "2026-11-28T03:16:04Z",
+        "size": 21854301
+      },
+      "iconSource": {
+        "url": "https://raw.githubusercontent.com/Costben/COBO/HEAD/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+        "path": "assets/cobo.png",
+        "bundleIdentifier": "com.cobo.app"
+      }
     }
   ]
 }

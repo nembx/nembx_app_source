@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Track the latest stable GitHub releases listed in upstreams.json."""
+"""Track configured GitHub releases, using stable releases by default."""
 
 import argparse
 import fnmatch
@@ -14,19 +14,39 @@ from add_app import ROOT, add_app
 from sync_icons import replace_file, sync_icons
 
 
-def latest_release(repo):
+def matching_assets(entry, release):
+    pattern = entry.get("assetPattern", "*.ipa").replace("{tag}", release["tag_name"])
+    return [asset for asset in release.get("assets", [])
+            if asset["name"].lower().endswith(".ipa") and fnmatch.fnmatchcase(asset["name"], pattern)]
+
+
+def latest_release(entry):
+    repo = entry["repo"]
     if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repo):
         raise ValueError("无效的 GitHub 仓库名")
     headers = {"Accept": "application/vnd.github+json", "User-Agent": "nembx-app-source/1.0"}
     if os.environ.get("GH_TOKEN"):
         headers["Authorization"] = "Bearer " + os.environ["GH_TOKEN"]
-    request = urllib.request.Request(f"https://api.github.com/repos/{repo}/releases/latest", headers=headers)
+    endpoint = f"https://api.github.com/repos/{repo}/releases"
+    include_prereleases = entry.get("includePrereleases", False)
+    page = 1
     try:
-        with urllib.request.urlopen(request, timeout=60) as response:
-            return json.load(response)
+        while True:
+            url = f"{endpoint}?per_page=100&page={page}" if include_prereleases else f"{endpoint}/latest"
+            request = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(request, timeout=60) as response:
+                result = json.load(response)
+            if not include_prereleases:
+                return result if not result.get("draft") and not result.get("prerelease") else None
+            for release in result:
+                if not release.get("draft") and matching_assets(entry, release):
+                    return release
+            if len(result) < 100:
+                return None
+            page += 1
     except urllib.error.HTTPError as error:
         if error.code == 404:
-            print(f"{repo}：暂无可读取的正式 Release")
+            print(f"{repo}：暂无可读取的 Release")
             return None
         raise
 
@@ -65,13 +85,10 @@ def sync(config_path, source_path):
     config = json.loads(config_path.read_text(encoding="utf-8"))
     changed = False
     for entry in config["repositories"]:
-        release = latest_release(entry["repo"])
-        if not release or release.get("draft") or release.get("prerelease"):
+        release = latest_release(entry)
+        if not release:
             continue
-        pattern = entry.get("assetPattern", "*.ipa").replace("{tag}", release["tag_name"])
-        assets = [asset for asset in release.get("assets", [])
-                  if asset["name"].lower().endswith(".ipa")
-                  and fnmatch.fnmatchcase(asset["name"], pattern)]
+        assets = matching_assets(entry, release)
         if not assets:
             print(f"{entry['repo']}：最新 Release 尚无匹配的 IPA，下次检查重试")
             continue
